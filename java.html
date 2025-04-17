@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Interactiva</title>
+    <link rel="stylesheet" href="java.css">
+</head>
+<body>
+    <section id="sabor-secreto">
+        <h2>🎂 ¡Adivina el sabor secreto!</h2>
+        <p id="pista">Cargando pista...</p>
+      
+        <input type="text" id="respuestaSabor" placeholder="Escribe tu respuesta aquí">
+        <button onclick="verificarSabor()">Verificar</button>
+        <p id="resultadoSabor"></p>
+      </section>
+      
+      <script>
+        // 1. Lista de sabores y sus pistas
+        const sabores = [
+          { nombre: "arequipe", pista: "Soy dulce, cremoso y tradicional. Acompaño muy bien al café..." },
+          { nombre: "chocolate", pista: "Oscuro, intenso y amado por muchos. Soy el rey de los postres." },
+          { nombre: "vainilla", pista: "Soy claro, suave y clásico. Estoy en casi todo y combino con todos." },
+          { nombre: "frutos rojos", pista: "Soy ácido y dulce a la vez. Me verás en colores como rojo y morado." },
+          { nombre: "frutos amarillos", pista: "Soy tropical y brillante. Traigo maracuyá y mango a la fiesta." }
+        ];
+      
+        let saborCorrecto = ""; // Aquí se guarda la respuesta correcta
+      
+        // 2. Selecciona un sabor aleatorio al cargar la página
+        function cargarPistaAleatoria() {
+          const indice = Math.floor(Math.random() * sabores.length); // elige un número aleatorio
+          const sabor = sabores[indice];
+          document.getElementById("pista").textContent = sabor.pista; // muestra la pista
+          saborCorrecto = sabor.nombre; // guarda la respuesta correcta
+        }
+      
+        // 3. Verifica la respuesta del usuario
+        function verificarSabor() {
+          const respuestaUsuario = document.getElementById("respuestaSabor").value.toLowerCase().trim();
+          const resultado = document.getElementById("resultadoSabor");
+      
+          if (respuestaUsuario === saborCorrecto) {
+            resultado.textContent = "🎉 ¡Correcto! Ese era el sabor secreto.";
+            resultado.style.color = "green";
+          } else {
+            resultado.textContent = "❌ Ups... Ese no es. ¡Intenta de nuevo!";
+            resultado.style.color = "red";
+          }
+        }
+      
+        // 4. Llama la función cuando se carga la página
+        window.onload = cargarPistaAleatoria;
+      </script>
+    
+</body>
+</html>

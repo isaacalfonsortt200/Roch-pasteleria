@@ -1,0 +1,120 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffaf7; 
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #B2E4F2; 
+    border-radius: 10px;
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #80BFFF;
+}
+
+header p {
+    font-style: italic;
+    color: #555;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+nav li {
+    background-color: #91C9F7; 
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    color: #80BFFF; 
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+section p {
+    line-height: 1.6;
+    text-align: justify;
+    color: #333;
+}
+
+section img {
+    width: 45%;
+    margin: 10px 2%;
+    border-radius: 10px;
+}
+footer {
+    background-color: #B2E4F2; 
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.btn-pedido {
+    display: inline-block;
+    background-color: #80BFFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pedido:hover {
+    background-color: #5aaedf;
+}
+section video {
+    width: 45%;
+    margin: 10px 2%;
+    border-radius: 10px;
+    object-fit: cover;
+}

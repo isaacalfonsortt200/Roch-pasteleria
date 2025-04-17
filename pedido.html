@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Pedido</title>
+  <link rel="stylesheet" href="2.css"> <!-- Tu hoja de estilos -->
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Haz tu pedido</h1>
+      <p>¡Personaliza tu torta como más te guste!</p>
+    </header>
+
+    <form action="#" method="POST"> <!-- Aquí irá tu backend si lo tienes -->
+      <!-- Producto -->
+      <label for="producto">Producto:</label>
+      <select id="producto" name="producto" required>
+        <option value="">--Selecciona un producto--</option>
+        <option value="MemeBox">MemeBox</option>
+        <option value="CupCakes">CupCakes</option>
+        <option value="Torta 6/8">Torta 6/8</option>
+        <option value="Torta 12/16">Torta 12/16</option>
+        <option value="Torta 20/24">Torta 20/24</option>
+      </select>
+
+      <!-- Sabor de torta -->
+      <label for="saborTorta">Sabor de torta:</label>
+      <select id="saborTorta" name="saborTorta" required>
+        <option value="">--Selecciona un sabor--</option>
+        <option value="Vainilla">Vainilla</option>
+        <option value="Chocolate">Chocolate</option>
+      </select>
+
+      <!-- Sabor de relleno -->
+      <label for="saborRelleno">Sabor de relleno:</label>
+      <select id="saborRelleno" name="saborRelleno" required>
+        <option value="">--Selecciona un relleno--</option>
+        <option value="Frutos rojos">Frutos rojos</option>
+        <option value="Frutos amarillos">Frutos amarillos</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Arequipe">Arequipe</option>
+      </select>
+
+      <!-- Frase personalizada -->
+      <label for="frase">Frase en la torta:</label>
+      <input type="text" id="frase" name="frase" placeholder="Escribe tu frase personalizada" required>
+
+      <!-- Dibujo (opcional: subir imagen) -->
+      <label for="dibujo">Sube tu dibujo o referencia (opcional):</label>
+      <input type="file" id="dibujo" name="dibujo" accept="image/*">
+
+      <!-- Botón de envío -->
+      <button type="submit">Enviar pedido</button>
+    </form>
+  </div>
+
+</body>
+</html>
